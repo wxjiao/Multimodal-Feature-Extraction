@@ -6,11 +6,13 @@ xxx
 
 ## Audio Feature Extraction
 ### Extract Audio Track from Video
-Tool: **FFmpeg**
+Tool: **FFmpeg** run in windows `cmd`:
 ```
 # extract from one videos
 ffmpeg -i 1_60.mp4 -f mp3 -vn 1_60.mp3
+
 # extract all videos
+# for %f in (*.mp4) do echo %f
 for file in *.mp4; do ffmpeg -i "$file" -f mp3 -vn "${file%.mp4}.mp3"; done  
 ```
 
