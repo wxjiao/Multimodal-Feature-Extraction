@@ -8,7 +8,10 @@ xxx
 ### Extract Audio Track from Video
 Tool: **FFmpeg**
 ```
-ffmpeg -i 1_60.mp4 -f mp3 -vn 1_60.mp3  # extract from one videos
+# extract from one videos
+ffmpeg -i 1_60.mp4 -f mp3 -vn 1_60.mp3
+# extract all videos
+for file in *.mp4; do ffmpeg -i "$file" -f mp3 -vn "${file%.mp4}.mp3"; done  
 ```
 
 P2FA: audio aligns with transcript.
