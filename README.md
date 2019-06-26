@@ -12,8 +12,8 @@ Tool: **FFmpeg** run in windows `cmd`:
 ffmpeg -i 1_60.mp4 -f mp3 -vn 1_60.mp3
 
 # extract all videos
-# for %f in (*.mp4) do echo %f
-for %f in (*.mp4) do ffmpeg -i "%f" -f mp3 -vn "%~nf.mp3"; done
+# test: for %f in (*.mp4) do echo %f
+for %f in (*.mp4) do ffmpeg -i "%f" -f mp3 -vn "%~nf.mp3"
 ```
 
 P2FA: audio aligns with transcript.
