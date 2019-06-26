@@ -13,7 +13,7 @@ ffmpeg -i 1_60.mp4 -f mp3 -vn 1_60.mp3
 
 # extract all videos
 # for %f in (*.mp4) do echo %f
-for file in *.mp4; do ffmpeg -i "$file" -f mp3 -vn "${file%.mp4}.mp3"; done  
+for %f in (*.mp4) do ffmpeg -i "%f" -f mp3 -vn "%{f%.mp4}.mp3"; done
 ```
 
 P2FA: audio aligns with transcript.
