@@ -6,6 +6,7 @@ xxx
 
 ## Audio Feature Extraction: Forced Alignment at Word-level
 FFmpeg: Video to audio;
+
 P2FA: audio aligns with transcript.
 
 ## Video Feature Extraction: Pretrained Embeddings from ResNet
