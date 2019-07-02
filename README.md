@@ -9,11 +9,15 @@ xxx
 Tool: **FFmpeg** run in windows `cmd`:
 ```
 # extract from one videos
-ffmpeg -i 1_60.mp4 -f mp3 -vn 1_60.mp3
+ffmpeg -i 1_60.mp4 -f wav -vn 1_60.wav
 
 # extract all videos
 # test: for %f in (*.mp4) do echo %f
-for %f in (*.mp4) do ffmpeg -i "%f" -f mp3 -vn "%~nf.mp3"
+for %f in (*.mp4) do ffmpeg -i "%f" -f wav -vn "%~nf.wav"
+
+# convert stereo to mono: -ac
+# resampling to 16000: -ar
+ffmpeg -i 1_60.wav -ac 1 -ar 16000 1_60_.wav
 ```
 
 P2FA: audio aligns with transcript.
