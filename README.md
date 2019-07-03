@@ -25,7 +25,11 @@ ffmpeg -i 1_60.wav -ac 1 -ar 16000 1_60_.wav
 ```
 
 ### Forced Alignment
-P2FA: audio aligns with transcript.
+P2FA: align audio with transcript at word-level.
+>Tools:
+>- HTK
+>- SoX
+
 
 ### Audio Feature Extraction
 [COVAREP](https://github.com/covarep/covarep): A cooperative voice analysis repository for speech technologies.
