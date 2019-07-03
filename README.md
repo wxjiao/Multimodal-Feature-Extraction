@@ -8,7 +8,7 @@ A detailed description on how to extract and align text, audio, and video featur
 ### Extract Audio Track from Video
 [FFmpeg](https://ffmpeg.org/) is used to extract the audio track from video. 
 
-We run it in windows `cmd`:
+We run **FFmpeg** in windows `cmd`:
 ```
 # Extract from one videos
 ffmpeg -i 1_60.mp4 -f wav -vn 1_60.wav
@@ -28,7 +28,7 @@ P2FA: audio aligns with transcript.
 ### Audio Feature Extraction
 [COVAREP](https://github.com/covarep/covarep): A cooperative voice analysis repository for speech technologies.
 
-The COVAREP tool is built on Matlab ( compatible with Octave), requiring the toolbox [*Voicebox*](http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html). 
+**COVAREP** is built on Matlab ( compatible with Octave), requiring the toolbox [*Voicebox*](http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html). 
 Unzip the *Voicebox* package and move the '/voicebox' folder to the Matlab toolbox folder. Use **Set Path** in Matlab to add '/voicebox' to Matlab Search Path.
 
 To extract the audio feature in Matlab:
@@ -49,10 +49,14 @@ To extract the audio feature in Matlab:
 **OpenFace** can be installed on Windows, MacOS, and Linux, here we run the code on Windows in `cmd`:
 ```
 # Extract features from videos
-FeatureExtraction.exe -f "./Dataset/video/video_1.avi"
+FeatureExtraction.exe -f "./Dataset/video/video_1.mp4"
 
 # Videos with multiple faces
-FaceLandmarkVidMulti.exe -f "./Dataset/video/video_1.avi"
+FaceLandmarkVidMulti.exe -f "./Dataset/video/video_1.mp4"
+
+# Extract all videos
+# Test: for %f in (./Dataset/MUStARD/*.mp4) do echo %f
+for %f in (./Dataset/video/*.mp4) do FaceLandmarkVidMulti.exe -f "./Dataset/video/%f"
 ```
 
 
