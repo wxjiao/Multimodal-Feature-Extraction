@@ -6,9 +6,11 @@ A detailed description on how to extract and align text, audio, and video featur
 
 ## Audio
 ### Extract Audio Track from Video
-[FFmpeg](https://ffmpeg.org/) is used to extract the audio track from video. 
+[FFmpeg](https://ffmpeg.org/): A complete, cross-platform solution to record, convert and stream audio and video.
 
-We run **FFmpeg** in windows `cmd`:
+**FFmpeg** is used to extract the audio track from video, merge voice channels, and resample the audio. 
+
+To extract the audio track from video in Windows `cmd`:
 ```
 # Extract from one videos
 ffmpeg -i 1_60.mp4 -f wav -vn 1_60.wav
