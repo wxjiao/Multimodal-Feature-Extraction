@@ -26,9 +26,8 @@ P2FA: audio aligns with transcript.
 ### Audio Feature Extraction
 [COVAREP](https://github.com/covarep/covarep): A Cooperative Voice Analysis Repository for Speech Technologies.
 
-The COVAREP tool is built on Matlab ( compatible with Octave), requiring the toolbox [Voicebox](http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html). 
-Unzip the Voicebox package and move the 'voicebox' folder to the Matlab toolbox folder. Use `Set Path` in Matlab to add `voicebox` to
-Matlab Search Path.
+The COVAREP tool is built on Matlab ( compatible with Octave), requiring the toolbox [*Voicebox*](http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html). 
+Unzip the *Voicebox* package and move the '/voicebox' folder to the Matlab toolbox folder. Use **Set Path** in Matlab to add '/voicebox' to Matlab Search Path.
 
 To extract the audio feature in Matlab:
 ```
@@ -41,5 +40,6 @@ To extract the audio feature in Matlab:
 >> COVAREP_feature_extraction('./Dataset/audio', 0.04);
 ```
 
-## Video Feature Extraction: Pretrained Embeddings from ResNet
+## Video Feature Extraction
+### Pretrained Embeddings from ResNet
 xxx
