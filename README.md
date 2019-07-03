@@ -26,10 +26,10 @@ ffmpeg -i 1_60.wav -ac 1 -ar 16000 1_60_.wav
 
 ### Forced Alignment
 P2FA: align audio with transcript at word-level.
-Tools:
-- [HTK](http://htk.eng.cam.ac.uk/): The compiling of HTK on Windows may encounter errors because of the incompatibility `.mkf` syntax.
-To solve the problem, you need to remove all the unnecessary **space line** in related `.mkf` files. Other steps please refer to [HTK on Windows](https://github.com/JoFrhwld/FAVE/wiki/HTK-on-Windows).
-- SoX
+
+**Tools**:
+- [HTK](http://htk.eng.cam.ac.uk/): About the compiling of HTK on Windows please refer to [HTK on Windows](https://github.com/JoFrhwld/FAVE/wiki/HTK-on-Windows). You need to set up the `win32` environment in `cmd` for compiling. Note that you may encounter errors when compling due to the incompatibility of `.mkf` syntax. To solve the problem, you have to remove all the unnecessary **space line** in related `.mkf` files. 
+- [SoX](http://sox.sourceforge.net/): To install SoX on Windows, you may refer to [SoX on Windows](https://github.com/JoFrhwld/FAVE/wiki/Sox-on-Windows). 
 
 
 ### Audio Feature Extraction
