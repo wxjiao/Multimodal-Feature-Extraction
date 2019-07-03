@@ -1,7 +1,7 @@
 # Multimodal-Feature-Extraction
 A detailed description on how to extract and align text, audio, and video features at word-level.
 
-## Text Feature Extraction
+## Text
 ###  Pretrained Embeddings from BERT
 
 ## Audio
@@ -26,7 +26,7 @@ ffmpeg -i 1_60.wav -ac 1 -ar 16000 1_60_.wav
 P2FA: audio aligns with transcript.
 
 ### Audio Feature Extraction
-[COVAREP](https://github.com/covarep/covarep): A Cooperative Voice Analysis Repository for Speech Technologies.
+[COVAREP](https://github.com/covarep/covarep): A cooperative voice analysis repository for speech technologies.
 
 The COVAREP tool is built on Matlab ( compatible with Octave), requiring the toolbox [*Voicebox*](http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html). 
 Unzip the *Voicebox* package and move the '/voicebox' folder to the Matlab toolbox folder. Use **Set Path** in Matlab to add '/voicebox' to Matlab Search Path.
@@ -42,6 +42,17 @@ To extract the audio feature in Matlab:
 >> COVAREP_feature_extraction('./Dataset/audio', 0.04);
 ```
 
-## Video Feature Extraction
-### Pretrained Embeddings from ResNet
-xxx
+## Video
+### Facial Feature Extraction
+[OpenFace](https://github.com/TadasBaltrusaitis/OpenFace):  A state-of-the art tool intended for facial landmark detection, head pose estimation, facial action unit recognition, and eye-gaze estimation.
+
+**OpenFace** can be installed on Windows, MacOS, and Linux, here we run the code on Windows in `cmd`:
+```
+# Extract features from videos
+FeatureExtraction.exe -f "./Dataset/video/video_1.avi"
+
+# Videos with multiple faces
+FaceLandmarkVidMulti.exe -f "./Dataset/video/video_1.avi"
+```
+
+
