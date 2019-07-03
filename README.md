@@ -48,7 +48,7 @@ To extract the audio feature in Matlab:
 ### Facial Feature Extraction
 [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace):  A state-of-the art tool intended for facial landmark detection, head pose estimation, facial action unit recognition, and eye-gaze estimation.
 
-**OpenFace** can be installed on Windows, MacOS, and Linux, here we run the code on Windows in `cmd`:
+**OpenFace** can be installed on Windows, MacOS, and Linux, here we run the code in Windows `cmd`:
 ```
 # Extract features from videos
 FeatureExtraction.exe -f "./Dataset/video/video_1.mp4"
