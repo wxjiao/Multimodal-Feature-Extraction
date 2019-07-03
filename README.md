@@ -24,15 +24,18 @@ ffmpeg -i 1_60.wav -ac 1 -ar 16000 1_60_.wav
 P2FA: audio aligns with transcript.
 
 ### Audio Feature Extraction
-[COVAREP](https://github.com/covarep/covarep): A Cooperative Voice Analysis Repository for Speech Technologies
+[COVAREP](https://github.com/covarep/covarep): A Cooperative Voice Analysis Repository for Speech Technologies.
+
 The COVAREP tool is built on Matlab ( compatible with Octave), requiring the toolbox [Voicebox](http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html).
+
 To extract the audio feature in Matlab:
 ```
 # run startup.m at the home dir of COVAREP to set up the paths
 >> startup
 
 # put you audio data in in_dir='Dataset/audio', set your sample_rate=0.04 (s)
-# the COVAREP_feature_extraction.m script will extract features of each frame and save them in separate .mat files for each audio
+# the COVAREP_feature_extraction.m script will extract features of each frame 
+# and save them in separate .mat files for each audio
 >> COVAREP_feature_extraction('./Dataset/audio', 0.04);
 ```
 
