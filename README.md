@@ -6,7 +6,7 @@ A detailed description on how to extract and align text, audio, and video featur
 
 ## Audio
 ### Extract Audio Track from Video
-[FFmpeg](https://ffmpeg.org/)\[C/C++\]: A complete, cross-platform solution to record, convert and stream audio and video.
+[FFmpeg](https://ffmpeg.org/) \[*C/C++*\]: A complete, cross-platform solution to record, convert and stream audio and video.
 
 **FFmpeg** is used to extract the audio track from video, merge voice channels, and resample the audio. 
 
