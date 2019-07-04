@@ -1,10 +1,10 @@
 # Multimodal-Feature-Extraction
 A detailed description on how to extract and align text, audio, and video features at word-level.
 
-## Text
+## 1. Text
 ###  Pretrained Embeddings from BERT
 
-## Audio
+## 2. Audio
 ### Extract Audio Track from Video
 [FFmpeg](https://ffmpeg.org/) \[C/C++\]: A complete, cross-platform solution to record, convert and stream audio and video.
 
@@ -59,7 +59,7 @@ To extract the audio feature in MATLAB:
 >> COVAREP_feature_extraction('./Dataset/audio', 0.04);
 ```
 
-## Video
+## 3. Video
 ### Facial Feature Extraction
 [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace) \[C/C++\]:  A state-of-the art tool intended for facial landmark detection, head pose estimation, facial action unit recognition, and eye-gaze estimation.
 
