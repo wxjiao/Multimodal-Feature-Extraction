@@ -34,7 +34,10 @@ ffmpeg -i 1_60.wav -ac 1 -ar 16000 1_60_.wav
 We use a modified version from [p2fa-vislab](https://github.com/ucbvislab/p2fa-vislab), which could take the `.json` schema for the input and the output. For more details, please refer to the repo. Here, we run the Python scripts in Windows `cmd`:
 ```ruby
 # Align for all videos
-for %f in (./Dataset/alignment/*.wav) do python align.py ./Dataset/alignment/%f ./Dataset/alignment/%~nf.json ./Dataset/alignment/%~nf_aligned.json
+for %f in (./Dataset/alignment/*.wav) do \
+python align.py ./Dataset/alignment/%f \
+./Dataset/alignment/%~nf.json \
+./Dataset/alignment/%~nf_aligned.json
 ```
 
 
