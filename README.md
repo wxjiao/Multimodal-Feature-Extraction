@@ -75,6 +75,6 @@ FaceLandmarkVidMulti.exe -f "./Dataset/video/video_1.mp4"
 # Test: for %f in (./Dataset/MUStARD/*.mp4) do echo %f
 for %f in (./Dataset/video/*.mp4) do FaceLandmarkVidMulti.exe -f "./Dataset/video/%f"
 ```
-> TODU: distinguish multiple faces;
+> TODO: distinguish multiple faces;
 
 
