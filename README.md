@@ -40,6 +40,7 @@ python align.py ./Dataset/alignment/%f \
 ./Dataset/alignment/%~nf_aligned.json
 ```
 
+> TODO: radiotool package; mis-alignment; phase;
 
 ### Audio Feature Extraction
 [COVAREP](https://github.com/covarep/covarep) \[MATLAB/Octave\]: A cooperative voice analysis repository for speech technologies.
@@ -74,5 +75,6 @@ FaceLandmarkVidMulti.exe -f "./Dataset/video/video_1.mp4"
 # Test: for %f in (./Dataset/MUStARD/*.mp4) do echo %f
 for %f in (./Dataset/video/*.mp4) do FaceLandmarkVidMulti.exe -f "./Dataset/video/%f"
 ```
+> TODU: distinguish multiple faces;
 
 
