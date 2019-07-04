@@ -6,7 +6,7 @@ A detailed description on how to extract and align text, audio, and video featur
 
 ## Audio
 ### Extract Audio Track from Video
-[FFmpeg](https://ffmpeg.org/): A complete, cross-platform solution to record, convert and stream audio and video.
+[FFmpeg](https://ffmpeg.org/)\[Language: C\]: A complete, cross-platform solution to record, convert and stream audio and video.
 
 **FFmpeg** is used to extract the audio track from video, merge voice channels, and resample the audio. 
 
@@ -27,7 +27,7 @@ ffmpeg -i 1_60.wav -ac 1 -ar 16000 1_60_.wav
 ### Forced Alignment
 [P2FA](https://web.sas.upenn.edu/phonetics-lab/): Penn Phonetics Lab Forced Aligner for English.
 
-**Tools**:
+**Requisites**:
 - [HTK](http://htk.eng.cam.ac.uk/): About the compiling of HTK on Windows please refer to [HTK on Windows](https://github.com/JoFrhwld/FAVE/wiki/HTK-on-Windows). You need to set up the `win32` environment in `cmd` for compiling. Note that you may encounter errors when compling due to the incompatibility of `.mkf` syntax. To solve the problem, you have to remove all the unnecessary **space line** in related `.mkf` files. 
 - [SoX](http://sox.sourceforge.net/): To install SoX on Windows, you may refer to [SoX on Windows](https://github.com/JoFrhwld/FAVE/wiki/Sox-on-Windows).
 
@@ -41,8 +41,8 @@ for %f in (./Dataset/alignment/*.wav) do python align.py ./Dataset/alignment/%f 
 ### Audio Feature Extraction
 [COVAREP](https://github.com/covarep/covarep): A cooperative voice analysis repository for speech technologies.
 
-**COVAREP** is built on Matlab ( compatible with Octave), requiring the toolbox [*Voicebox*](http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html). 
-Unzip the *Voicebox* package and move the '/voicebox' folder to the Matlab toolbox folder. Use **Set Path** in Matlab to add '/voicebox' to Matlab Search Path.
+**Requisites**
+- [Voicebox](http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html): **COVAREP** is built on Matlab ( compatible with Octave), requiring the *Voicebox* toolbox. Unzip the *Voicebox* package and move the '/voicebox' folder to the Matlab toolbox folder. Use **Set Path** in Matlab to add '/voicebox' to Matlab Search Path.
 
 To extract the audio feature in Matlab:
 ```
