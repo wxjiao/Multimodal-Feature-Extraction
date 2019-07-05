@@ -2,6 +2,12 @@
 A detailed description on how to extract and align text, audio, and video features at word-level.
 
 ## 1. Text
+### Pre-trained Word Embeddings from GloVe
+The first and also convenient way to obtain textual feature is to fetch the pre-trained word embeddings from publicly available sources, such as Word2Vec, and GloVe. To do so, we follow the strategies below:
+  - **Vocabulary**: Build a vocabulary based on the output of **Forced Alignment**, as it performs the first step of tokenization. Some abbrevations need to be taken care of, such as `i'm`, `i've`, and `what's`.
+  - **Embedding Matrix**: Assign the GloVe vectors to the built **Vocabulary**, and initialize unknown word by random vectors.
+  - **Embedding Matching**: To be consistent with the audio segments, we get the embeddings for abbrevations like `what's` by summing the embeddings of `what`,`'`, and `s`. Other single tokens just fetch their embeddings from the **Embedding Matrix** directly.
+
 ###  Pretrained Embeddings from BERT
 
 ## 2. Audio
