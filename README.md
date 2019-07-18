@@ -68,8 +68,7 @@ To extract the audio feature in MATLAB:
 >> COVAREP_feature_formant_extraction('./Dataset/audio', 0.04);
 ```
 
-> **Note:** The above function should report error when handling very short audios, which can be referred from `filtfilt.m`. 
-To address the problem, we keep doubling the input audio in `COVAREP_feature_formant_extraction_perfile.m` until the number of samples exceeds the original sampling rates (16000 Ours).
+> **Note:** The called function `COVAREP_feature_formant_extraction_perfile.m` should report errors when handling very short audios, limited by `filtfilt.m`. To address the problem, we keep doubling the input audio until the number of samples exceeds the original sampling rates (16000 Ours).
 
 
 ## 3. Video
