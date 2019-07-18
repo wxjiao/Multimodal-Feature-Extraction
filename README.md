@@ -68,6 +68,10 @@ To extract the audio feature in MATLAB:
 >> COVAREP_feature_formant_extraction('./Dataset/audio', 0.04);
 ```
 
+> The above function should report error when handling very short audios, which can be referred from ``filtfilt.m``. 
+To address the problem, we keep doubling the input audio until the number of samples exceeds the original sampling rates (16000 here).  
+
+
 ## 3. Video
 ### Facial Feature Extraction
 [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace) \[C/C++\]:  A state-of-the art tool intended for facial landmark detection, head pose estimation, facial action unit recognition, and eye-gaze estimation.
