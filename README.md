@@ -55,16 +55,17 @@ python align.py ./Dataset/alignment/%f \
 
 **Requisites**
 - [Voicebox](http://www.ee.ic.ac.uk/hp/staff/dmb/voicebox/voicebox.html) \[MATLAB\]: **COVAREP** is built on MATLAB ( compatible with Octave), requiring the *Voicebox* toolbox. Unzip the *Voicebox* package and move the '/voicebox' folder to the MATLAB toolbox folder. Use **Set Path** in Matlab to add '/voicebox' to MATLAB Search Path.
+- [Deep Learning Toolbox](https://www.mathworks.com/products/deep-learning.html) should be installed in MATLAB for extracting the *Voice Activity Detection* (VAD) feature.
 
 To extract the audio feature in MATLAB:
 ```ruby
 # Run startup.m at the home dir of COVAREP to set up the paths
->> startup
+>> startup;
 
 # Put your audio data in in_dir='Dataset/audio', set your sample_rate=0.04 (s)
-# the COVAREP_feature_extraction.m script will extract features of each frame 
-# and save them in separate .mat files for each audio
->> COVAREP_feature_extraction('./Dataset/audio', 0.04);
+# the COVAREP_feature_formant_extraction.m script will extract features of each frame 
+# and save them in separate .mat/.csv files for each audio
+>> COVAREP_feature_formant_extraction('./Dataset/audio', 0.04);
 ```
 
 ## 3. Video
