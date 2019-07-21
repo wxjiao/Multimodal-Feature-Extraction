@@ -85,10 +85,10 @@ FaceLandmarkVidMulti.exe -f "./Dataset/video/video_1.mp4"
 
 # Extract all videos
 # Test: for %f in (./Dataset/MUStARD/*.mp4) do echo %f
-for %f in (./Dataset/video/*.mp4) do FaceLandmarkVidMulti.exe -f "./Dataset/video/%f"
+for %f in (./Dataset/video/*.mp4) do FeatureExtraction.exe -f "./Dataset/video/%f"
 ```
 For more details about the arguments, please refer to [Command Line Arguments](https://github.com/TadasBaltrusaitis/OpenFace/wiki/Command-line-arguments).
 
-> TODO: distinguish multiple faces;
+> TODO: distinguish the speaker from multiple faces;
 
 
