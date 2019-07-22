@@ -1,6 +1,7 @@
 # Multimodal-Feature-Extraction
 A detailed description on how to extract and align text, audio, and video features at word-level.
 
+----------------------------------
 ## 1. Text-Audio Alignment
 ### Extract Audio Track from Video
 [FFmpeg](https://ffmpeg.org/) \[C/C++\]: A complete, cross-platform solution to record, convert and stream audio and video.
@@ -41,7 +42,7 @@ python align.py ./Dataset/alignment/%f \
 
 > TODO: radiotool package; mis-alignment; phase;
 
-
+----------------------------------
 ## 2. Text
 ### Pre-trained Word Embeddings from GloVe
 The first and also convenient way to obtain textual feature is to fetch the pre-trained word embeddings from publicly available sources, such as Word2Vec, and GloVe. To do so, we follow the strategies below:
@@ -51,7 +52,7 @@ The first and also convenient way to obtain textual feature is to fetch the pre-
 
 > TODO: Pretrained Embeddings from BERT;
 
-
+----------------------------------
 ## 3. Audio
 ### Audio Feature Extraction
 [COVAREP](https://github.com/covarep/covarep) \[MATLAB/Octave\]: A cooperative voice analysis repository for speech technologies.
@@ -73,7 +74,7 @@ To extract the audio feature in MATLAB:
 
 > **Note:** The called function `COVAREP_feature_formant_extraction_perfile.m` should report errors when handling very short audios, limited by `filtfilt.m`. To address the problem, we keep doubling the input audio until the number of samples exceeds the original sampling rates (16000 Ours).
 
-------------------
+----------------------------------
 ## 4. Video
 ### Facial Feature Extraction
 [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace) \[C/C++\]:  A state-of-the art tool intended for facial landmark detection, head pose estimation, facial action unit recognition, and eye-gaze estimation.
