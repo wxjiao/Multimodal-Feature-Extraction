@@ -65,15 +65,15 @@ To extract the audio feature in MATLAB:
 # Run startup.m at the home dir of COVAREP to set up the paths
 >> startup;
 
-# Put your audio data in in_dir='Dataset/audio', set your sample_rate=0.04 (s)
+# Put your audio data in in_dir='Dataset/audio', set your sample_rate=0.01 (s)
 # the COVAREP_feature_formant_extraction.m script will extract features of each frame 
 # and save them in separate .mat/.csv files for each audio
->> COVAREP_feature_formant_extraction('./Dataset/audio', 0.04);
+>> COVAREP_feature_formant_extraction('./Dataset/audio', 0.01);
 ```
 
 > **Note:** The called function `COVAREP_feature_formant_extraction_perfile.m` should report errors when handling very short audios, limited by `filtfilt.m`. To address the problem, we keep doubling the input audio until the number of samples exceeds the original sampling rates (16000 Ours).
 
-
+------------------
 ## 4. Video
 ### Facial Feature Extraction
 [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace) \[C/C++\]:  A state-of-the art tool intended for facial landmark detection, head pose estimation, facial action unit recognition, and eye-gaze estimation.
@@ -86,7 +86,7 @@ FeatureExtraction.exe -f "./Dataset/video/video_1.mp4"
 # Videos with multiple faces
 FaceLandmarkVidMulti.exe -f "./Dataset/video/video_1.mp4"
 
-# Extract all videos
+# Extract from all videos
 # Test: for %f in (./Dataset/MUStARD/*.mp4) do echo %f
 for %f in (./Dataset/video/*.mp4) do FeatureExtraction.exe -f "./Dataset/video/%f"
 ```
