@@ -49,7 +49,7 @@ When aligning the transcripts with the corresponding audios at word-level, P2FA 
 
 Explicitly, we have two steps as below:
   - **Embedding Matrix**: Assign the GloVe vectors to the built **Vocabulary**, and initialize unknown word by random vectors.
-  - **Text Feature**: For single words, fetch their embeddings from the **Embedding Matrix**; for abbrevations like `what's`, average the embeddings of `what`,`'`, and `s` as its text feature.
+  - **Text Feature**: For single words, fetch their embeddings from the **Embedding Matrix**; for abbrevations like `what's`, average the embeddings of `what`,`'`, and `s` to obtain the text feature.
 
 > TODO: Pretrained Embeddings from BERT;
 
