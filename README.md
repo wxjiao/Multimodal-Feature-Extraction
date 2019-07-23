@@ -45,10 +45,11 @@ python align.py ./Dataset/alignment/%f \
 ----------------------------------
 ## 2. Text
 ### Pre-trained Word Embeddings from GloVe
-The first and also convenient way to obtain textual feature is to fetch the pre-trained word embeddings from publicly available sources, such as Word2Vec, and GloVe. To do so, we follow the strategies below:
-  - **Vocabulary**: Build a vocabulary based on the output of **Forced Alignment**, as it performs the first step of tokenization. Some abbrevations need to be taken care of, such as `i'm`, `i've`, and `what's`.
+When aligning the transcripts with the corresponding audios at word-level, P2FA tokenizes each utterance by splitting `''`. As a result, some abbrevations of words are regarded as single tokens, such as `i'm`, `i've`, and `what's`. To be consistent, we recommend to build the vocabulary based on the aligned transcripts, and extract text feature for each token by fetching the pre-trained word embeddings from publicly available sources, such as Word2Vec and GloVe. 
+
+Explicitly, we have two steps as below:
   - **Embedding Matrix**: Assign the GloVe vectors to the built **Vocabulary**, and initialize unknown word by random vectors.
-  - **Embedding Matching**: To be consistent with the audio segments, we get the embeddings for abbrevations like `what's` by summing the embeddings of `what`,`'`, and `s`. Other single tokens just fetch their embeddings from the **Embedding Matrix** directly.
+  - **Text Feature**: For single words, fetch their embeddings from the **Embedding Matrix**; for abbrevations like `what's`, average the embeddings of `what`,`'`, and `s` as its text feature.
 
 > TODO: Pretrained Embeddings from BERT;
 
