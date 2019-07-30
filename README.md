@@ -98,10 +98,15 @@ For more details about the arguments, please refer to [Command Line Arguments](h
 
 [ResNet](https://arxiv.org/pdf/1512.03385.pdf): Pre-trained image recognition deep models can be adopted to extract implicit visual features. Here we take the ImageNet pre-trained ResNet-152 as an example. 
 
-Firstly, extract images from each video using **FFmpeg**:
+Firstly, extract images from each video using **FFmpeg** in `cmd`:
 ```ruby
 # Extract from a video and save images in order
 ffmpeg -i "./Dataset/video/video_1.mp4" "./Dataset/video/video_1/%05d.jpg"
+
+# Extract from all videos
+for %f in (./Dataset/video/*.mp4) do 
+  mkdir "./Dataset/video/%~nf"
+  ffmpeg -i "./Dataset/video/%f" "./Dataset/video/%~nf/%05d.jpg"
 ```
 
 Then, extract the `pool5` layer of ResNet-152:
