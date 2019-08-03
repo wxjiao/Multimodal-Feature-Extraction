@@ -3,7 +3,7 @@ A detailed description on how to extract and align text, audio, and video featur
 
 ----------------------------------
 ## 1. Text-Audio Alignment
-### Extract Audio Track from Video
+### - Extract Audio Track from Video
 [FFmpeg](https://ffmpeg.org/) \[C/C++\]: A complete, cross-platform solution to record, convert and stream audio and video.
 
 **FFmpeg** is used to extract the audio track from video, merge voice channels, and resample the audio. 
@@ -22,7 +22,7 @@ for %f in (*.mp4) do ffmpeg -i "%f" -f wav -vn "%~nf.wav"
 ffmpeg -i 1_60.wav -ac 1 -ar 16000 1_60_.wav
 ```
 
-### Forced Alignment
+### - Forced Alignment
 [P2FA](https://web.sas.upenn.edu/phonetics-lab/) \[Python\]: Penn Phonetics Lab Forced Aligner for English.
 
 **Requisites**:
@@ -44,7 +44,7 @@ python align.py ./Dataset/alignment/%f \
 
 ----------------------------------
 ## 2. Text
-### Pre-trained Word Embeddings from GloVe
+### - Pre-trained Word Embeddings from GloVe
 When aligning the transcripts with the corresponding audios at word-level, P2FA tokenizes each utterance by splitting `''`. As a result, some abbrevations of words are regarded as single tokens, such as `i'm`, `i've`, and `what's`. To be consistent, we recommend to build the vocabulary based on the aligned transcripts, and extract text feature for each token by fetching the pre-trained word embeddings from publicly available sources, such as Word2Vec and GloVe. 
 
 Explicitly, we have two steps as below:
@@ -55,7 +55,7 @@ Explicitly, we have two steps as below:
 
 ----------------------------------
 ## 3. Audio
-### Audio Feature Extraction
+### - Audio Feature Extraction
 [COVAREP](https://github.com/covarep/covarep) \[MATLAB/Octave\]: A cooperative voice analysis repository for speech technologies.
 
 **Requisites**
@@ -77,7 +77,7 @@ To extract the audio feature in MATLAB:
 
 ----------------------------------
 ## 4. Video
-### Facial Feature Extraction
+### - Facial Feature Extraction
 [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace) \[C/C++\]:  A state-of-the art tool intended for facial landmark detection, head pose estimation, facial action unit recognition, and eye-gaze estimation.
 
 **OpenFace** can be installed on Windows, MacOS, and Linux, here we run the code in Windows `cmd`:
@@ -95,6 +95,8 @@ for %f in (./Dataset/video/*.mp4) do FeatureExtraction.exe -f "./Dataset/video/%
 For more details about the arguments, please refer to [Command Line Arguments](https://github.com/TadasBaltrusaitis/OpenFace/wiki/Command-line-arguments).
 
 > TODO: distinguish the speaker from multiple faces;
+
+### - Implicit Visual Feature
 
 [ResNet](https://arxiv.org/pdf/1512.03385.pdf): For implicit visual features, it is getting popular to extract from pre-trained deep models like ResNet. Please visit the repo [ResNet-Video-Features](https://github.com/wxjiao/ResNet-Video-Features), which is an example of extracting features from a `pool5` layer of the ImageNet pre-trained ResNet-152 image classification model. 
 
