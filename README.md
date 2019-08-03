@@ -96,19 +96,6 @@ For more details about the arguments, please refer to [Command Line Arguments](h
 
 > TODO: distinguish the speaker from multiple faces;
 
-[ResNet](https://arxiv.org/pdf/1512.03385.pdf): Pre-trained image recognition deep models can be adopted to extract implicit visual features. Here we take the ImageNet pre-trained ResNet-152 as an example. 
-
-Firstly, extract images from each video using **FFmpeg** in `cmd`:
-```ruby
-# Extract from a video and save images in order
-ffmpeg -i "./Dataset/video/video_1.mp4" "./Dataset/video/video_1/%05d.jpg"
-
-# Extract from all videos
-for %f in (./Dataset/video/*.mp4) do 
-  mkdir "./Dataset/video/%~nf"
-  ffmpeg -i "./Dataset/video/%f" "./Dataset/video/%~nf/%05d.jpg"
-```
-
-Then, extract the `pool5` layer of ResNet-152:
+[ResNet](https://arxiv.org/pdf/1512.03385.pdf): For implicit visual features, it is getting popular to extract from pre-trained deep models like ResNet. Please visit the repo [ResNet-Video-Features](https://github.com/wxjiao/ResNet-Video-Features), which is an example of extracting features from a `pool5` layer of the ImageNet pre-trained ResNet-152 image classification model. 
 
 
