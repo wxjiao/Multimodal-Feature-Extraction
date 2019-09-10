@@ -57,7 +57,7 @@ Explicitly, we have two steps as below:
 
 ### - Pre-trained Word Embeddings from GloVe
 **Requisites**:
--[pytorch-transformers v0.6.2](https://github.com/huggingface/pytorch-transformers/tree/v0.6.2): A library of state-of-the-art pretrained models for Natural Language Processing.
+- [pytorch-transformers v0.6.2](https://github.com/huggingface/pytorch-transformers/tree/v0.6.2)\[Python\]: A library of state-of-the-art pretrained models for Natural Language Processing.
 
 Embeddings from deep pre-trained models like BERT retain the contextual information for words in a sentence. Initializing word embeedings in this way can reduce word sense ambiguity. However, a problem arises if we want to initialize words or phrases split by the tokenizers (e.g., P2FA) that are not integrated in BERT. For such a situation, please refer to the repo [BERT-Text-Features](https://github.com/wxjiao/BERT-Text-Features) for more information.
 
